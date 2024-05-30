@@ -1,4 +1,3 @@
-
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -22,11 +21,13 @@ body {
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    width: 300px;
+    width: 225px; /* Larghezza ridotta per far stare tutte le card in una riga */
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Aggiunto margine inferiore per evitare sovrapposizione */
 }
 
 .card img {
@@ -36,19 +37,17 @@ body {
 
 .card-content {
     padding: 20px;
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    
+    width: 100%; /* Assicura che il contenuto occupi l'intera larghezza della card */
+    box-sizing: border-box;
 }
-
-
 
 .card h3 {
     margin: 0;
-    font-size: 24px;
+    font-size: 20px; /* Ridotto leggermente il font-size */
     color: #4d4d4d;
 }
 
@@ -58,12 +57,11 @@ body {
 }
 
 .prezzo {
-    font-size: 20px;
+    font-size: 18px; /* Ridotto leggermente il font-size */
     font-weight: bold;
-    align-self: flex-end;
-
+    align-self: flex-end; /* Allinea il prezzo a destra */
+    margin-top: auto; /* Spinge il prezzo verso il basso */
 }
-
 
 button {
     background-color: #ffcc00;
@@ -72,13 +70,12 @@ button {
     padding: 10px 20px;
     text-align: center;
     display: inline-block;
-    font-size:16px;
+    font-size: 16px;
     margin-top: 10px;
+    cursor: pointer;
     border-radius: 5px;
-    
 }
 
 button:hover {
     background-color: #e6b800;
 }
-
